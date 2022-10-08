@@ -1,0 +1,385 @@
+/******* REGLAS ************/
+@import "elementos/variables";
+@import "elementos/estilos-generales";
+@import "elementos/icono-mobile";
+@import "elementos/animaciones";
+@import "elementos/logo";
+@import "elementos/mixin";
+@import "elementos/banner";
+@import "elementos/cards";
+@import "elementos/botones";
+
+/*------ESTILOS UNIVERSALES--------*/
+* {
+    @extend .universal;
+    
+}
+
+/*########################--ESTILOS DEL BODY--############################
+############################################################################*/
+.body {
+    @extend .body;
+}
+
+/*------------------------------MOBILE----------------------------------*/
+/*########################--ESTILOS DEL HEADER--############################
+############################################################################*/
+.mobile-off {
+    display: none;
+}
+
+.header {
+    @extend .header-mobile;
+    &__contenedor-bot{
+        @include flex($fila, $space-between);        
+        width: 100%;
+        }
+    &__menu-mobile {
+        @extend .menu-mobile;
+        cursor: pointer; 
+
+        &--active {
+            transition: color .25s ease-in, ;
+            @include pop-up(1s, infinite);
+        }
+
+        &--active:active {
+            color: map-get($colores, bg-secundary);
+            animation: none;
+        }
+    }
+
+    .logo {
+        //------------------LOGO//
+        @extend .logo;
+    }
+    
+}
+
+
+/*########################--ESTILOS DEL MAIN--############################
+############################################################################*/
+
+.banner {
+    //------------------BANNER//
+    @include flex-center($columna);
+    @extend .banner;
+
+    &__titulo {
+        @extend .titulo-banner;
+    }
+
+    &__subtitulo {
+        @extend .subtitulo-banner;
+    }
+
+    &__boton {
+        @extend .btn;
+
+        &--activo:hover {
+            background-color: map-get($colores, color-tercery);
+            @include pop-up(1s, 1);
+        }
+    }
+}
+
+.productos {
+    //-------------------PRODUCTOS PRINCIPALES//
+    @include flex-center ($columna);
+
+    .header-productos {
+        //------CABECERA DE PRODUCTOS
+        @include flex-center ($columna);
+        max-width: 100%;
+
+        &__titulo {
+            //---Tutulo Cabecera
+            color: map-get($colores, color-principal);
+            font-size: 2.5rem;
+            font-weight: 700;
+            max-width: 100vw;
+            padding: 0rem 2rem;
+            text-align: center;
+
+        }
+
+        &__img {
+            //--Imgagen de Cabecera
+            width: 5.75rem;
+        }
+
+        .menu-productos {
+            //---Menu bajo el Titulo
+            @include flex-center ($fila);
+            padding: .5rem;
+            max-width: 100vw;
+            list-style: none;
+
+            &__item {
+                position: relative;
+                padding: .5rem .5rem 0rem;
+                
+                &:before {
+                    @include borde-animado-before($colores,"bg-primary");
+                }
+
+                &:hover:before {
+                    @include bode-animado-hover;
+                }
+            }
+
+            &__link {
+                color: map-get($colores, color-tercery);
+                text-decoration: none;
+
+                &:hover {
+                    color: map-get($colores, bg-tercery);
+                    transition: color 1s;
+                }
+            }
+        }
+    }
+    .contenedor-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card {
+            @extend .card;
+        }
+    }
+    
+}
+
+
+
+.formulario-contacto {
+    //--------------FORMULARIO DE CONTACTO//
+    @include flex-center ($columna);
+
+    &__titulo {
+        //---------Titulo Formulario Contacto//
+        font-size: 2.5rem;
+        color: map-get($colores, bg-secundary);
+    }
+
+    &__input {
+        //---------Inputs del Formulario Contacto
+        @extend .inputs;
+    }
+
+    .botones-contacto {
+        //---Botones del Formulario Contacto//
+        @include flex-center ($fila);
+        width: 100%;
+
+        &__boton {
+            @extend .btn;
+            @extend .btn-ctto;
+
+            &--activo:active {
+                box-shadow: inset 4px 4px 15px 0px #000000;
+            }
+
+            &--activo:hover {
+                background-color: rgb(180, 89, 25);
+                transition: color .5s;
+            }
+
+            &-reset {
+                @extend .btn-reset;
+            }
+        }
+    }
+}
+
+.suscribirse {
+    //------------Seccion Subscribirse
+    @include flex ($fila, $space-evenly);
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+    background-color: map-get($colores, bg-primary);
+    color: map-get($colores, color-secundary);
+
+    &__contenedor-titulo {
+        @include flex ($fila, $flex-start);
+        width: 100%;
+        max-width: 30rem;
+    }
+
+    &__titulo {
+        padding: 0;
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        text-align: left;
+
+    }
+
+    .formulario-suscribirse {
+        @include flex-center ($fila);
+        width: 100%;
+        max-width: 27rem;
+
+        &__input-text {
+            @extend .inputs;
+            background-color: map-get($colores, color-secundary);
+            width: 100%;
+        }
+
+        &__boton {
+            @extend .btn;
+            @extend .btn-suscribirse;
+        }
+    }
+}
+
+
+
+/*########################--ESTILOS DEL FOOTER--############################
+############################################################################*/
+
+.footer {
+    @include flex-center ($columna);
+    width: 100%;
+
+    &__contenedor {
+        @include flex-center ($fila);
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: map-get($colores, bg-secundary);
+    }
+
+    .logo-footer {
+        @extend .logo;
+        max-width: 25rem;
+        padding: 1rem;
+
+        &__titulo {
+            color: map-get($colores, bg-primary);
+
+            &--blanco {
+                color: map-get($colores, color-secundary);
+                padding: 0 .25rem;
+            }
+        }
+
+    }
+
+    .cards-footer {
+        @include flex-center ($columna);
+        align-items: flex-start;
+
+        .card-footer {
+            @include flex-center ($fila);
+
+            &__contenedor {
+                padding: 1rem;
+                color: map-get($colores, color-secundary);
+            }
+
+            &:hover {
+                @include pop-up(1s, 1);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__parrafo {
+        width: 100%;
+        background-color: map-get($colores, bg-tercery);
+        color: map-get($colores, color-secundary);
+        text-align: center;
+        margin: 0;
+    }
+
+}
+
+/*------------------------------DESKTOP 740px---------------------------------
+-----------------------------------------------------------------------
+------------------------------------------------------------------------*/
+
+
+@media (min-width:740px){
+    .footer{
+        &__contenedor{
+            justify-content: space-between;
+            padding: 0rem 2rem;
+        }
+        .logo-footer{
+            justify-content: flex-start;
+        &__titulo{
+            font-size: 2rem;
+        }
+        &__img{
+            width: 2rem;
+        }
+    }
+}
+}
+
+
+/*------------------------------DESKTOP 1080px-----------------------------
+-------------------------------------------------------------------------
+------------------------------------------------------------------------*/
+@media (min-width:1080px){
+    .mobile-off{
+        display: unset;
+    }
+    
+    .header {
+        .menu-mobile{
+            display: none;
+        }
+        @include header-desk;        
+        @include flex($columna, $center);
+        &__contenedor{
+            @include flex($fila, $space-between);
+            background-color: map-get($colores, bg-tercery);
+            color: map-get($colores, color-secundary);
+            width: 100%;
+            padding: .25rem 1rem;
+        }
+        &__subtitulo{
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 0;
+        }
+        .nav-submenu{
+            @include flex($fila, $space-between);
+            margin:0;
+            list-style: none;
+            &__item{
+                padding: 0 1rem;
+            }
+        }
+        
+        .menu{
+            @include flex($fila, $space-between);
+            list-style: none;
+            padding: 1rem;
+            &__item{
+                position:relative;
+                padding: 0 1rem;
+                color: map-get($colores,color-secundary);
+                cursor: pointer;
+                transition: all .5s;
+                &::before{
+                    @include borde-animado-before($colores,"color-secundary");
+                }
+                &:hover{
+                    color: rgba(233, 233, 233, 0.911);
+                    transition: all .5s;
+                }
+                &:hover::before{
+                    @include bode-animado-hover;
+                }
+            }
+        }
+    }
+    
+    .suscribirse {//------------Seccion Subscribirse//        
+        @include flex ($fila, $space-between);
+        flex-wrap: wrap;
+        padding: 1rem 2rem;
+        }
+    }
+

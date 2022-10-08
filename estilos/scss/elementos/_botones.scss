@@ -1,0 +1,49 @@
+/*----ESTILO DE LOS BOTONES---*/
+.btn{
+    background-color: map-get($colores, bg-primary);
+    border-radius: .5rem;
+    color: map-get($colores, color-secundary);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+.btn-ctto{
+    margin: 4rem .25rem;
+    width: 50%;
+    max-width: 15rem;
+    border-radius: 3rem;
+}
+
+.btn-reset{
+    background-color: map-get($colores, color-tercery);    
+    &:hover{
+        background-color: #706e6e!important;
+    }
+}
+
+.btn-suscribirse{
+    background-color: map-get($colores, bg-secundary);
+    border-radius: 3rem;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    &:active{
+        box-shadow: inset 4px 4px 15px 0px #000000;
+    }
+    &:hover{
+        background-color: #66320d;
+    }
+}
+
+.inputs{
+    background-color: map-get($colores, bg-secundary);
+    padding: 1rem;
+    width: 80%;
+    max-width: 21.5rem;
+    margin: .25rem;
+    border-radius: 1.5rem;
+    &::placeholder{
+        color: map-get($colores, color-secundary);
+    }
+}

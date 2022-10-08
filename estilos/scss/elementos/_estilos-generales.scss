@@ -1,0 +1,38 @@
+/*--------ESTILOS UNIVERSALES-------*/
+.universal{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    
+}
+
+/*-------ESTILOS DEL BODY------*/
+.body{
+    max-width: 100vw;
+    height: auto;
+    justify-content: center;
+    font-family:map-get($fuentes, ft-principal),
+                map-get($fuentes, ft-secundaria);
+    display:flex;
+    flex-direction: column;
+    a{
+        text-decoration: none;
+    }
+}
+
+/*------ESTILOS DEL HEADER------------*/
+.header-mobile{//------HEADER MOBILE------//
+    align-items: center;
+    padding: 1.125rem  2.5rem;
+    background-color: map-get($colores,bg-primary);
+}
+
+@mixin header-desk {
+    align-items: center;
+    padding:0rem;
+    background-color: map-get($colores,bg-primary);
+}
+
+/*------ESTILOS DEL MAIN---------*/
+

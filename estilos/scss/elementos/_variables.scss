@@ -1,0 +1,37 @@
+/*----FUENTES IMPORTADAS----*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*-----------COLORES-------------
+#################################*/
+$colores: (
+    /*--Colores de fondos--*/
+    "bg-primary": #F0A83E,
+    "bg-secundary": #3C2313,
+    "bg-tercery": #222222,
+    "bg-cards": #FBFAF6,
+
+    /*--Colores de fuentes--*/
+    "color-principal":#3C2313,
+    "color-secundary":#FFFFFF,
+    "color-tercery": #8A8787,
+);
+
+
+/*------------TIPOS DE FUENTES-----------
+########################################*/
+$fuentes: (
+    "ft-principal": roboto,
+    "ft-secundaria": sans-serif,
+);
+
+
+/*---------FLEX DIRECCTION------*/
+$fila: row;
+$columna: column;
+$space-around: space-around;
+$space-between: space-between;
+$space-evenly: space-evenly;
+$flex-start: flex-start;
+$flex-end: flex-end;
+$center: center;
+

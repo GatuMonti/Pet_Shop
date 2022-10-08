@@ -1,0 +1,19 @@
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    cursor:pointer;
+    &__titulo {
+        font-size: 1rem;
+        font-weight: 700;
+        color: map-get($colores, color-secundary);
+        &--marron {
+            color: map-get($colores, color-principal);
+        }
+    }
+    &--hover:hover{
+        animation: pop-up 1.5s 1;
+    }
+    &__img{
+        padding-bottom: .25rem;
+    }
+}

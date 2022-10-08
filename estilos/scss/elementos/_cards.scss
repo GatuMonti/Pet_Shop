@@ -1,0 +1,23 @@
+/*-----ESTILOS DE LAS CARDS---------*/
+
+.card {
+    //-----CARDS
+    max-width: 70vw;
+    margin: 1rem;
+    background-color: map-get($colores, bg-cards);
+    text-align: center;
+    &__titulo{
+        color: map-get($colores, color-principal);
+        border-top: 1px solid rgba(128, 128, 128, 0.281);
+    }
+    &__subtitulo{
+        color: map-get($colores, bg-primary);
+        margin: 0;
+    }
+    .card-body {
+        padding: 0;
+    }
+}
+
+
+

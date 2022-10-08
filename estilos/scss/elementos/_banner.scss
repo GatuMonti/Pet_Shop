@@ -1,0 +1,25 @@
+/*--------------BANNER-------------------*/
+.banner{//--------Cuerpo
+    align-items: flex-end;
+    background-image: url(/img/Fondo_tazon.svg);
+    background-size: cover;
+    color: map-get($colores, color-principal);
+    height: 27.5rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.titulo-banner{//--------Titulo
+    background-color: map-get($colores,color-secundary);
+    font-size: 3rem;
+    font-weight: 400;
+    padding: .75rem .5rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.subtitulo-banner{//--------SubTitulo
+    font-weight: 400;
+    padding: .75rem 0rem;
+}
+

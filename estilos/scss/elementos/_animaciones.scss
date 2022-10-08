@@ -1,0 +1,41 @@
+/*-----ANIMACION POP-UP---------*/
+@mixin pop-up($duracion, $iteration){
+    animation-name: pop-up;
+    animation-duration: $duracion;
+    animation-iteration-count: $iteration;
+    @keyframes pop-up {
+        0%{
+            scale:1;
+        }
+            50%{
+            scale: 1.35;
+        }
+        100%{
+            scale: 1;
+        }
+}
+}
+
+
+/*-----ANIMACION BORDE MENU---------*/
+
+@mixin borde-animado-before($colores,$color){
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: map-get($colores,$color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: all .5s ease-out;
+}
+
+@mixin bode-animado-hover{
+    color: black;
+    width: 60%;
+    transition: all .5s ease-out;
+    left: 20%;
+}
+
+

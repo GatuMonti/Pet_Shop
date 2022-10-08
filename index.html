@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/css/style.css">
+    <script src="https://kit.fontawesome.com/ff5f8ebf04.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>PETSHOP</title>
+</head>
+
+<!------------------------------------------------------------------------------INICIO_BODY---
+--------------------------------------------------------------------------------INICIO_BODY-->
+
+
+<body class="body">
+    <!------------------------------------------------------------------INICIO_HEADER--
+    --------------------------------------------------------------------INICIO_HEADER-->
+
+    <header class="header">
+        <div class="header__contenedor">
+            <h2 class="header__subtitulo mobile-off">Grandes ofertas en comederos</h2>
+
+            <nav class="mobile-off">
+                <ul class="nav-submenu">
+                    <li class="nav-submenu__item nav-header-submenu__item--activo">Español</li>
+                    <li class="nav-submenu__item nav-header-submenu__item--activo">ERG$</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__contenedor-bot">
+            <i class="header__menu-mobile header__menu-mobile--active fa-solid fa-bars"></i>
+
+            <a href="index.html">
+                <div class="logo logo--hover">
+                    <img class="logo__img" src="img/Logo_Cat.svg" alt="Cat">
+                    <h1 class="logo__titulo"><span class="logo__titulo--marron">Front</span>Cat&Dog</h1>
+                    <img class="logo__img" src="img/Logo_Dog.svg" alt="Dog">
+                </div>
+            </a>
+
+            <nav class="mobile-off">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <img src="img/huella_pequeña.svg" alt="huella">
+                        Categorias
+                    </li>
+                    <li class="menu__item">
+                        <img src="img/huella_pequeña.svg" alt="huella">
+                        Pets
+                    </li>
+                    <li class="menu__item">
+                        <img src="img/huella_pequeña.svg" alt="huella">
+                        Nosotros
+                    </li>
+                    <li class="menu__item">
+                        <img src="img/huella_pequeña.svg" alt="huella">
+                        Contactenos
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!------------------------------------------------------------------INICIO_MAIN----
+    --------------------------------------------------------------------INICIO_MAIN---->
+    <main class="main">
+        <section class="banner">
+            <!-----------------BANNER-->
+            <h2 class="banner__titulo">¡Es un placer tenerte aqui!</h2>
+            <h3 class="banner__subtitulo">Comederos en Descuento</h3>
+            <button class="banner__boton banner__boton--activo" type="button">COMEDEROS</button>
+        </section>
+        <section class="productos">
+            <!----------PRODUCTOS--->
+            <div class="header-productos">
+                <img class="header-productos__img header-productos__img--activo" src="img/huella_grande.svg">
+                <h2 class="header-productos__titulo header-producto__titulo--activo">Productos Destacados</h2>
+                <nav>
+                    <ul class="menu-productos">
+                        <li class="menu-productos__item"><a class="menu-productos__link" href="#">Comederos</a></li>
+                        <li class="menu-productos__item"><a class="menu-productos__link" href="#">Accesorios</a></li>
+                        <li class="menu-productos__item"><a class="menu-productos__link" href="#">Comida</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!------------Tarjetas-->
+            <cards class="contenedor-cards">
+                <div class="card">
+                    <img src="img/churrasquito.svg" class="card__img" alt="churrasquito">
+                    <div class="card-body">
+                        <h5 class="card__titulo">Jueguete Churrasquito</h5>
+                        <p class="card__subtitulo">$150</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/Huesito.svg" class="card__img" alt="huesito">
+                    <div class="card-body">
+                        <h5 class="card__titulo">Huesito</h5>
+                        <p class="card__subtitulo">$250</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/comedero.svg" class="card__img" alt="comedero">
+                    <div class="card-body">
+                        <h5 class="card__titulo">Comedero</h5>
+                        <p class="card__subtitulo">$550</p>
+                    </div>
+                </div>
+        </section>
+        <!-------------Formulario Contacto-->
+        <form class="formulario-contacto" method="post" action="#">
+            <h2 class="formulario-contacto__titulo">Contactenos</h2>
+            <input class="formulario-contacto__input" type="text" placeholder="Nombre y Apellido">
+            <input class="formulario-contacto__input" type="email" placeholder="Ingresa tu correo electronico">
+            <input class="formulario-contacto__input" type="tel" placeholder="Telefono">
+            <div class=botones-contacto>
+                <button class="botones-contacto__boton botones-contacto__boton--activo botones-contacto__boton-reset"
+                    type="reset">Resetear</button>
+                <button class="botones-contacto__boton botones-contacto__boton--activo botones-contacto__boton-enviar"
+                    type="submit">Enviar</button>
+            </div>
+        </form>
+        <section class="suscribirse">
+            <!----------Formulario Suscripcion-->
+            <div class="suscribirse__contenedor-titulo">
+                <img class="suscribirse__img" src="img/envio_mail.svg" alt="sobre">
+                <h2 class="suscribirse__titulo"> Suscribete para mas novedades</h2>
+            </div>
+            <form class="formulario-suscribirse">
+                <input class="formulario-suscribirse__input-text">
+                <button type="submit"
+                    class="formulario-suscribirse__boton formulario-suscribirse__boton--activo">Suscribirse</button>
+            </form>
+        </section>
+    </main>
+
+    <!------------------------------------------------------------------INICIO_FOOTER----
+    --------------------------------------------------------------------INICIO_FOOTER---->
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <a href="index.html">
+                <div class="logo logo--hover logo-footer">
+                    <img class="logo__img logo-footer__img" src="img/Logo_Cat.svg" alt="Cat">
+                    <h2 class="logo__titulo logo-footer__titulo"><span
+                            class="logo-footer__titulo--blanco">Front</span>Cat&Dog</h2>
+                    <img class="logo__img logo-footer__img" src="img/Logo_Dog.svg" alt="Dog">
+                </div>
+            </a>
+            <div class="cards-footer">
+                <div class="card-footer card-footer--activo card-localidad">
+                    <img class="card-footer__img" src="img/icono_localidad.svg" alt="localidad">
+                    <div class=card-footer__contenedor>
+                        <h3 class="card-footer__titulo">Localidad</h3>
+                        <p class="card-footer__parrafo">Calle - Provincia</p>
+                    </div>
+                </div>
+                <div class="card-footer card-footer--activo card-tel">
+                    <img class="card-footer__img" src="img/Icono_telefono.svg" alt="localidad">
+                    <div class=card-footer__contenedor>
+                        <h3 class="card-footer__titulo">Numero de Telefono</h3>
+                        <p class="card-footer__parrafo">15-111-111-111</p>
+                    </div>
+                </div>
+                <div class="card-footer card-footer--activo card-email">
+                    <img class="card-footer__img" src="img/Icono_mail.svg" alt="localidad">
+                    <div class=card-footer__contenedor>
+                        <h3 class="card-footer__titulo">Correo Electronico</h3>
+                        <p class="card-footer__parrafo">Direccion de correo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer__parrafo">Todos los derechos reservados Front END</p>
+
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
